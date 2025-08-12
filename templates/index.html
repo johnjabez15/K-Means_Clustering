@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Means Customer Segmentation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>K-Means Customer Segmentation</h1>
+        <form action="/predict" method="POST">
+            <label>Age:</label>
+            <input type="number" name="age" required step="0.1">
+
+            <label>Annual Income:</label>
+            <input type="number" name="income" required step="0.1">
+
+            <label>Spending Score:</label>
+            <input type="number" name="score" required step="0.1">
+
+            <button type="submit">Predict Cluster</button>
+        </form>
+    </div>
+</body>
+</html>
